@@ -20,6 +20,7 @@ require_text() {
 }
 
 #sh "$root/scripts/test-xr1710g-tools.sh"
+chmod +x "$root/scripts/test-status-and-istore-safety.sh"
 sh "$root/scripts/test-status-and-istore-safety.sh" "$root"
 
 node --check "$root/apps/luci-app-xr1710g-recovery/htdocs/luci-static/resources/view/system/xr1710g-recovery.js"
