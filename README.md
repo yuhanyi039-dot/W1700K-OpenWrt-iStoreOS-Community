@@ -1,4 +1,4 @@
-# XR1710G OpenWrt / iStoreOS Wi-Fi 7 Community Firmware v1.4.0
+ # XR1710G OpenWrt / iStoreOS Wi-Fi 7 Community Firmware v1.4.0
 
 **语言 / Languages：** [中文（本页）](README.md) | [English](README-EN.md) | [双语刷机指南 / Bilingual Flashing Guide](FLASHING-GUIDE.md)
 
