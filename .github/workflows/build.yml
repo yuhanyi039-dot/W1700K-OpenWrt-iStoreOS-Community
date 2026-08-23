@@ -183,7 +183,7 @@ jobs:
           xr1710g-status-core; do
           make "package/$xr_package/clean"
         done
-        make -j"$BUILD_JOBS" || make -j1 || make -j1 V=s
+        make -j1 V=s
         chmod +x "$GITHUB_WORKSPACE/scripts/rebuild-initramfs-recovery.sh"
         "$GITHUB_WORKSPACE/scripts/rebuild-initramfs-recovery.sh" "$PWD"
         chmod +x "$GITHUB_WORKSPACE/scripts/verify-xr1710g-build.sh"
