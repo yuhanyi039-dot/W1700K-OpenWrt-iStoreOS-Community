@@ -27,6 +27,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v5
 
+    - name: 增加虚拟内存（防止OOM）
+      run: |
+        sudo fallocate -l 4G /swapfile
+        sudo chmod 600 /swapfile
+        sudo mkswap /swapfile
+        sudo swapon /swapfile
+        free -h
+    
     - name: XR1710G统一预构建门禁
       run: |
         chmod +x scripts/prebuild-xr1710g-release.sh
