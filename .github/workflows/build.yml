@@ -60,6 +60,8 @@ jobs:
           /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
         sudo -E apt-get -qq install $(cat $GITHUB_WORKSPACE/depends/ubuntu-22.04)
+        sudo -E apt-get -qq install libressl-dev -y
+        sudo -E apt-get -qq install libssl-dev -y
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
