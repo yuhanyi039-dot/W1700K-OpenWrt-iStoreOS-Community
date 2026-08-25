@@ -136,6 +136,13 @@ jobs:
       if: ${{ env.TARGET == 'openwrt' }}
       run: cp configs/openwrt.config openwrt/.config
 
+    - name: 禁用 libressl 主机工具
+      run: |
+        cd openwrt
+        echo 'CONFIG_PACKAGE_libressl=n' >> .config
+        echo 'CONFIG_HOST_libressl=n' >> .config
+        make oldconfig
+
     - name: DIY part2 — OpenWrt
       if: ${{ env.TARGET == 'openwrt' }}
       run: |
